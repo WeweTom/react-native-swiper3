@@ -156,9 +156,9 @@ export default React.createClass({
     let initState = {
       autoplayEnd: false,
     }
-
-    initState.total = props.children
-      ? (props.children.length || 1)
+    let children = React.Children.toArray(props.children);
+    initState.total = children
+      ? (children.length || 1)
       : 0
 
     initState.index = initState.total > 1
@@ -301,12 +301,13 @@ export default React.createClass({
   },
 
   renderTitle() {
-    let child = this.props.children[this.state.index]
+    let children = React.Children.toArray(this.props.children);
+    let child = children[this.state.index]
     let title = child && child.props.title
     return title
       ? (
       <View style={styles.title}>
-        {this.props.children[this.state.index].props.title}
+        {children[this.state.index].props.title}
       </View>
     )
       : null
@@ -372,7 +373,7 @@ export default React.createClass({
   render() {
     let state = this.state
     let props = this.props
-    let children = props.children
+    let children = React.Children.toArray(props.children)
     let index = state.index
     let total = state.total
     let loop = props.loop
@@ -384,14 +385,12 @@ export default React.createClass({
 
     // For make infinite at least total > 1
     if(total > 1) {
-
       // Re-design a loop model for avoid img flickering
       pages = Object.keys(children)
       if(loop) {
         pages.unshift(total - 1)
         pages.push(0)
       }
-
       pages = pages.map((page, i) =>
         <View style={pageStyle} key={i}>{children[page]}</View>
       )
