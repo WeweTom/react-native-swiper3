@@ -11,14 +11,14 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunnylqm/react-native-swiper2.git"
+    "url": "https://github.com/WeweTom/react-native-swiper3"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sunnylqm/react-native-swiper2/issues"
+    "url": "https://github.com/WeweTom/react-native-swiper3/issues"
   },
-  "homepage": "https://github.com/sunnylqm/react-native-swipe2#readme",
+  "homepage": "https://github.com/WeweTom/react-native-swiper3/issues#readme.md",
   "dependencies": {
     "react-timer-mixin": "^0.13.3"
   }
