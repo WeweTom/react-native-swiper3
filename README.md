@@ -4,15 +4,19 @@
 
 ![logo](http://i.imgur.com/P4cRUgD.png)
 
-Based on react-native-swiper, which was the best Swiper component for React Native.  
+Based on react-native-swiper2, which was the best Swiper component for React Native.  
 
 However for some reason, react-native-swiper didn't update for long time, and can not run on recent react native versions.  
+
+fix some bugs On android
 
 So I forked this `react-native-swiper2`, and would maintain it as long as I could.  
 
 PRs or Issues are deeply welcomed.
 
 ## Changelogs  
+- **[v2.0.6]**
+  + surport dynamic generated children
 
 - **[v2.0.5]**  
   + add scrollTo for android. (thanks [@LeeChSien](https://github.com/LeeChSien)).
